@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 body{
     width: 100%;
@@ -193,7 +197,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: flex;
     gap: 0.75rem;             /* Space between items */
 }
 
@@ -215,7 +218,8 @@ body{
 }
 
 .socialMedia a :hover {
-   stroke: #811019;  
+  stroke: #811019;
+  fill: #811019; /* Change the fill color */
 
 }
 
@@ -324,3 +328,350 @@ top: 20%;
 }
 
 }
+
+
+/* section divs */
+.sectionContainer{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ margin: 0px 80px;
+ padding-top: 30vh;
+ align-items: center;
+}
+
+.sectionHeaders{
+  display : flex;
+  flex-direction: column;
+ 
+}
+
+.sectionHeader{
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4rem;
+}
+
+
+.sectionText{
+  color: #FFF;
+  font-family: 'Caveat', sans-serif;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.35rem;
+}
+
+
+.arrow-right {
+  display: flex;
+  position: relative;
+  width: 81px; 
+  height: 16px;
+}
+
+/* Horizontal line */
+.arrow-right::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #FFF; /* Stroke color */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Arrowhead */
+.arrow-right::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 8px;  /* Width of arrowhead */
+  height: 8px; /* Height of arrowhead */
+  border-top: 2px solid #FFF; /* Stroke color */
+  border-right: 2px solid #FFF; /* Stroke color */
+}
+
+
+
+.section{
+  position: relative;
+  min-height: 50vh;
+  
+}
+
+.section-africa{
+  background-image: url('assets/images/elephants.jpg');
+  
+}
+
+.section-scotland{
+  background-image: url('assets/images/hourses.jpg');
+}
+
+.section-india{
+  background-image: url('assets/images/bird1.jpg');
+}
+
+.section-asia{
+  background-image: url('assets/images/tiger3.jpg');
+}
+
+
+/* parallax effect */
+.section-africa, .section-scotland, .section-india, .section-asia {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+/* subscription box */
+.subscribtion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.subsCont{
+  margin: 5rem 0rem;
+}
+
+#subscHeader{
+color: #404040;
+text-align: center;
+font-family: 'Raleway', sans-serif;
+font-size: 1.75rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.35rem;
+}
+
+.subscribtionParag{
+  color: #404040;
+text-align: center;
+font-family: 'Raleway', sans-serif;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.2rem;
+}
+
+.subscForm > form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem 0;
+  
+}
+
+.subscForm > form > input {
+  width: 20rem;
+  height: 3.125rem;
+  flex-shrink: 0;
+  background: #FFF;
+  box-shadow: 0px 0px 10px 2px rgba(64, 64, 64, 0.25);
+  border: none;
+  border-radius: 0;
+  margin-right: 0.72rem;
+  color: rgba(64, 64, 64, 0.80);
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.13rem;
+  padding-left: 2rem;
+}
+
+.subscForm > form > input:focus {
+  outline: none; 
+  border: 1px solid #404040; /* Adds a subtle border on focus */
+}
+
+button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0.92rem 1.25rem;
+border: 1px solid #404040;
+border-radius: 0;
+font-family: 'Raleway', sans-serif;
+color: #404040;
+text-align: center;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.15rem;
+cursor: pointer;
+}
+
+button > .arrow-right{
+  width: 22px; 
+  height: 9px;
+  margin-left: 0.5rem;
+}
+
+
+
+button > .arrow-right::before {
+  background-color: #404040;
+  height: 1px;
+}
+
+
+button > .arrow-right::after {
+  border-top: 1px solid #404040; 
+  border-right: 1px solid #404040; 
+  width: 2px;  /* Width of arrowhead */
+  height: 2px; /* Height of arrowhead */
+  }
+
+
+button:hover{
+  background-color: #811019;
+  color: #FFF;
+  border-color: #811019;
+}
+
+button:hover > .arrow-right::before {
+  background-color: #FFF;
+}
+
+button:hover > .arrow-right::after {
+  border-top: 1px solid #FFF; 
+  border-right: 1px solid #FFF; 
+}
+
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 3rem;
+  overflow-x: hidden;
+}
+
+.footerWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footerContact > img {
+  width: 100px;
+}
+
+.footerText {
+  color: #404040;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.15rem;
+  text-transform: lowercase;
+  padding-top: 1rem;
+}
+
+.footerText > a {
+  color: #404040;
+  text-decoration: none;
+}
+
+.ip-rights {
+  width: 100%;
+  padding-top: 3rem;
+  color: #404040;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.1125rem;
+}
+
+.ip-rights > p {
+  padding: 10px 80px;
+}
+
+.footerSocialMedia {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerSocialMedia  a {
+  margin: 0.5rem 0rem;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+
+.footerSocialMedia a:hover svg path {
+  stroke: #811019;
+  fill: #811019; /* Change the fill color */
+}
+
+/* Ensure consistent size of SVG icons */
+.footerSocialMedia a svg {
+  width: 20px;  /* Set to your desired size */
+  height: 20px; /* Set to your desired size */
+  transition: none; /* Remove transitions for size scaling */
+}
+
+
+.footerNav {
+  display: flex;
+  flex-direction: row;
+}
+
+.footerNav > ul > li > a {
+  text-decoration: none;
+  color: #404040;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.15rem;
+}
+
+.footerNav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.footerNav > ul > li {
+  flex: 1 0 50%; /* Take up 50% of the container width */
+  padding: 0.5rem; /* Optional padding to space the items */
+}
+
