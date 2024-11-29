@@ -376,7 +376,7 @@ top: 20%;
 .sectionText{
   color: #FFF;
   font-family: 'Caveat', sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -1091,7 +1091,7 @@ footer {
 
   .contact{
     display:flex;
-    width: 100vw;
+    
     flex-direction: row;
     margin: 0 auto;
     padding: 50px 80px;
