@@ -11,7 +11,7 @@
     <header>
         <section class="top-nav">
             <div class="logo">
-                <img src="assets/images/Logo.svg" alt="JackWilderman Logo">
+              <a href="index.html"><img src="assets/images/Logo.svg" alt="JackWilderman Logo"></a>  
             </div>
             <input id="menu-toggle" type="checkbox" />
             <label class='menu-button-container' for="menu-toggle">
@@ -39,25 +39,31 @@
             <div class="contactForm">
                 <h1>GET IN TOUCH</h1>
                 <form class="contact-form row">
+
                     <div class="form-field">
                        <input id="name" class="input-text" type="text" required>
                        <label class="label" for="name">NAME</label>
                     </div>
+
                     <div class="form-field">
                        <input id="surname" class="input-text" type="text" required>
                        <label class="label" for="surname">SURNAME</label>
                     </div>
 
+
+                  
                     <div class="form-field">
-                       <input id="email" class="input-text " type="email" required>
+                       <input id="email" class="input-text " type="text" required>
                        <label class="label" for="email">E-MAIL</label>
                     </div>
-                    <div class="form-field ">
-                       <input id="message" class="input-text " type="text" required>
-                       <label class="label" for="message">TEXT</label>
+                    
+                    <div class="form-field" id="textField">
+                     <textarea id="message" class="textarea-text" rows="5" required></textarea>
+                     <label class="label" for="message">TEXT</label>
                     </div>
-                    <div class="button">
-                        <button type="submit">SEND <div class="arrow-right"></div></button>
+
+                    <div class="button" >
+                        <button id="contactBtn" type="submit">SEND<div class="arrow-right"></div></button>
                     </div>
                  </form>
             </div>
@@ -74,7 +80,7 @@
     <footer>
         <div class="footerWrap">
             <div class="footerContact">
-                <img src="assets/images/Logo.svg" alt="JackWilderman Logo">
+                <a href="index.html"><img src="assets/images/Logo.svg" alt="JackWilderman Logo"></a>  
                 <p class="footerText">
                     <a href="mailto:jackwilderman@gmail.com">jackwilderman@gmail.com</a>
                 </p>

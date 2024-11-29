@@ -18,6 +18,9 @@ body{
      background: #F4F4F4;
 }
 
+a{
+    text-decoration: none;
+}
 
 .top-nav {
   display: flex;
@@ -152,7 +155,7 @@ body{
     align-items: center;
     transform: scaleY(0);
     transform-origin: top;
-    z-index: 1;
+    z-index: 4;
   }
 
   #menu-toggle:checked ~ .menu {
@@ -373,7 +376,7 @@ top: 20%;
 .sectionText{
   color: #FFF;
   font-family: 'Caveat', sans-serif;
-  font-size: 1.75rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -1116,11 +1119,15 @@ footer {
 .contactForm{
   width: 50%;
   margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 
  /* form */
  .contactForm h1{
-  color: #F4F4F4;
+color: #F4F4F4;
 font-family: "Raleway", sans-serif;
 font-size: 2.25rem;
 font-style: normal;
@@ -1139,35 +1146,33 @@ padding-bottom: 2rem;
   .input-text {
      display: block;
      width: 100%;
-     height: 36px;
+     height: 32px;
      border-width: 0 0 2px 0;
     color: #F4F4F4;
     background: transparent;
-font-family: "Raleway", sans-serif;
-font-size: 1rem;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 0.16875rem;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.16875rem;
+    border-bottom: 1px solid #F4F4F4;
 
+}
      
      
-     &:focus {
-        outline: none;
-     }
-     
-     &:focus,
-     &.not-empty {
-        + .label {
-           transform: translateY(-24px);
-        }
-     }
-  }
+.input-text:focus {
+  outline: none;
+}
 
-  #message {
-    border-width: 2px;
-    height: 100px;
-  }
+/* When input has focus or content, label moves up */
+.input-text:focus + .label,
+.input-text.not-empty + .label,
+.input-text:valid + .label {
+  transform: translateY(-25px);
+  transition: transform 0.3s ease-out;
+}
+
 
   .label {
      position: absolute;
@@ -1183,7 +1188,148 @@ letter-spacing: 0.16875rem;
     line-height: normal;
     letter-spacing: 0.16875rem;
   }
+
+#contactBtn {
+  border: 1px solid #F4F4F4;
+  background-color: transparent;
+  color: #F4F4F4;
+ 
+}
+
+#contactBtn .arrow-right::before {
+  height: 1px;
+  background-color: #F4F4F4;
   
-  
+}
+
+#contactBtn .arrow-right::after {
+  border-top: 1px solid #F4F4F4;
+  border-right: 1px solid #F4F4F4;
+}
+
+#contactBtn:hover {
+  background-color: #F4F4F4;
+  color: #18200A;
+  border-color: #F4F4F4;
+}
+
+#contactBtn:hover .arrow-right::before {
+  background-color: #18200A;
+}
 
 
+#contactBtn:hover .arrow-right::after {
+  border-top: 1px solid #18200A;
+  border-right: 1px solid #18200A;
+}
+
+
+.contactForm .button {
+ float: right;
+}
+
+
+/* Textarea specific adjustments */
+
+
+.textarea-text + .label {
+  position: absolute;
+  top: 12px;
+  left: 3px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: 0.16875rem;
+  pointer-events: none;
+  transition: none; /* No transition on label */
+
+}
+
+.textarea-text {
+  width: 100%;
+  border: 1px solid #F4F4F4;
+  background: transparent; 
+  margin-top: 35px; 
+  color: #F4F4F4; 
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.16875rem;
+  box-sizing: border-box; /* Ensures padding is included in the height/width calculation */
+  resize: none; /* Disable manual resizing of the textarea */
+
+}
+
+
+.textarea-text:focus {
+  outline: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .contact{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .form-field{
+margin-top: 30px;
+
+  }
+
+  .fieldText{
+    margin-top: 0px;
+  }
+
+.contactPic{
+  display: none;
+}
+
+.contactWrap{
+  width: 100%;
+  height: max-content;
+  
+}
+.contactForm{
+  width: 100%;
+  margin: 2rem 0rem;
+  display: inline-block;
+  
+}
+
+
+.contact-form {
+  margin: 0rem 2rem;
+}
+/* form */
+.contactForm h1 {
+  width: max-content;
+  font-size: 2.3rem;
+  margin: 2rem auto;
+  overflow: hidden; /* Prevent overflow */
+}
+
+
+
+.input-text {
+  font-size: 0.625rem;
+}
+   
+.label {
+  font-size: 0.75rem;  
+}
+
+.textarea-text + .label {
+font-size: 0.75rem;
+}
+
+.textarea-text {
+font-size: 0.625rem;
+}
+
+
+}
