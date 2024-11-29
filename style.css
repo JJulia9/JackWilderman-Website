@@ -1189,11 +1189,24 @@ padding-bottom: 2rem;
     letter-spacing: 0.16875rem;
   }
 
+
+  
+  
+  
+  
+
+
 #contactBtn {
   border: 1px solid #F4F4F4;
   background-color: transparent;
   color: #F4F4F4;
  
+}
+
+#contactBtn .arrow-right {
+  width: 22px; 
+  height: 9px;
+  margin-left: 0.5rem;
 }
 
 #contactBtn .arrow-right::before {
@@ -1205,6 +1218,8 @@ padding-bottom: 2rem;
 #contactBtn .arrow-right::after {
   border-top: 1px solid #F4F4F4;
   border-right: 1px solid #F4F4F4;
+  width: 2px;  /* Width of arrowhead */
+    height: 2px; /* Height of arrowhead */
 }
 
 #contactBtn:hover {
@@ -1215,6 +1230,7 @@ padding-bottom: 2rem;
 
 #contactBtn:hover .arrow-right::before {
   background-color: #18200A;
+
 }
 
 
