@@ -1,3 +1,4 @@
+// parallax effect
 document.addEventListener('scroll', () => {
     document.querySelectorAll('.content').forEach(section => {
         const scrollPosition = window.scrollY;
